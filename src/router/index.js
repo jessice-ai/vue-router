@@ -7,6 +7,7 @@ import sunAbout from '../views/about.vue'
 import sunHome from '../views/home.vue'
 import sunNews from '../views/news.vue'
 import sunmessage from '../views/message.vue'
+import message_show from '../views/message_show.vue'
 
 Vue.use(VueRouter)
 
@@ -30,7 +31,13 @@ export default new VueRouter({
 				},
 				{
 					path:'/ac/sm',
-					component:sunmessage
+					component:sunmessage,
+					children:[
+						{
+							path:'/ac/sm/detail/:id', //路由传值,使用:id占位
+							component:message_show
+						}
+					]
 				},
 				{
 					path:'/', //给嵌套路由设置一个默认路由

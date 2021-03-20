@@ -1,8 +1,13 @@
 <template>
   <div>
   	<ul>
-  		<li v-for="(val,index) in data" :key="index">{{val.title}} <a href="">删除</a></li>
+  		<li v-for="(val,index) in data" :key="index">
+  			<!-- ES6语法-->
+  			<router-link :to="`/ac/sm/detail/${val.id}`">{{val.title}}</router-link>
+  			<a href="">删除</a>
+  		</li>
   	</ul>
+  	<router-view></router-view>
   </div>
 </template>
 
@@ -47,6 +52,7 @@ export default {
 	// 		this.data = sundata
 	// 	},1000)
 	// }
+
 }
 </script>
 
