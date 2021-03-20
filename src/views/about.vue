@@ -1,5 +1,9 @@
 <template>
-  <div>点击关于我们后显示的内容</div>
+  
+  <div>
+    <div>关于我们</div>
+    <input type="text" name="">
+  </div>
 </template>
 
 <script>

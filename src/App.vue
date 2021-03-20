@@ -11,7 +11,9 @@
       </div>
       <div class="aright">
         <!-- router-view 显示对应路由组件页面内容 -->
-        <router-view></router-view>
+        <keep-alive>
+          <router-view></router-view>
+        </keep-alive>
       </div>
     </div>
   </div>
