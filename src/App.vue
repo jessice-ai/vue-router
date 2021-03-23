@@ -12,7 +12,8 @@
       <div class="aright">
         <!-- router-view 显示对应路由组件页面内容 -->
         <keep-alive>
-          <router-view></router-view>
+          <!-- router-view 传值  sunMsg="sdun" 表示 传递的值为sdun  :sunMsg="sdun" 表示传递的是个变量 -->
+          <router-view sunMsg="sdun"></router-view>
         </keep-alive>
       </div>
     </div>

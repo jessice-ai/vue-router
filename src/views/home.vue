@@ -9,7 +9,8 @@
         <router-link to="/ac/sm" >新闻</router-link>
       </li>
     </ul>
-    <router-view></router-view>
+    
+    <router-view ></router-view>
   </div>
 </template>
 
