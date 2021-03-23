@@ -6,6 +6,7 @@
   	<div>
   		id:{{messageData.id}}
   		id:{{messageData.title}}
+  		<button @click="goback">返回按钮</button>
   	</div>
 
   </div>
@@ -36,6 +37,13 @@ export default {
 		//$route.params.id 当前路由对象中存着传过来的数据
 		const id = this.$route.params.id*1
 		this.messageData = allData.find(detail => detail.id===id)
+	},
+	methods:{
+		goback(){
+			//this.$router.back() //返回上一个路由记录
+			this.$router.go(-1) //返回上一个路由记录
+		}
+		
 	},
 	//侦听
 	watch:{
